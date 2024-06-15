@@ -120,6 +120,7 @@ class ViewController: UIViewController {
                     } else {
                         self?.notifications = []
                         self?.links = []
+                        self?.links.append(data[0].frameUrl ?? "")
                     }
                 }
                 
@@ -141,19 +142,19 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if notifications.count == 0 {
+        if links.count == 0 {
             notifHint.isHidden = false
             notifCollection.isHidden = true
         } else {
             notifHint.isHidden = true
             notifCollection.isHidden = false
         }
-        return notifications.count
+        return links.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "notifCell", for: indexPath) as! NotifCollectionViewCell
-        cell.configure(text: notifications[indexPath.item], link: links[indexPath.item] )
+        cell.configure(text: notifications.count > 0 ? notifications[indexPath.item] : "", link: links[indexPath.item] )
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

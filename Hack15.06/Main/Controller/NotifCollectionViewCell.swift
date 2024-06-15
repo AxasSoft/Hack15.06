@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class NotifCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var dangerStack: UIStackView!
     @IBOutlet weak var dateTime: UILabel!
     @IBOutlet weak var body: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -19,6 +20,15 @@ class NotifCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(text: String, link: String) {
+        
+        if text == "" {
+            backgroundColor = UIColor.white
+            dangerStack.isHidden = true
+        } else {
+            backgroundColor = UIColor(resource: .color)
+            dangerStack.isHidden = false
+        }
+        
         body.text = text
         image.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let url: URL = Constants.imageUrl.appendingPathComponent(link)

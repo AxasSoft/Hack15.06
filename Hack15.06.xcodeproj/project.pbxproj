@@ -11,6 +11,9 @@
 		A84A44EB2C1DC05E0028F822 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44EA2C1DC05E0028F822 /* NotificationController.swift */; };
 		A84A44EE2C1DCE840028F822 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44ED2C1DCE840028F822 /* MainModel.swift */; };
 		A84A44F02C1DD6910028F822 /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = A84A44EF2C1DD6910028F822 /* Wormholy */; };
+		A84A44F22C1DDE740028F822 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44F12C1DDE740028F822 /* TaskController.swift */; };
+		A89D94B02C1DF910004D4CAC /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A89D94AF2C1DF910004D4CAC /* SDWebImage */; };
+		A89D94B22C1DF910004D4CAC /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A89D94B12C1DF910004D4CAC /* SDWebImageMapKit */; };
 		A8BDCCDD2C1D64A90002AB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */; };
 		A8BDCCDF2C1D64A90002AB81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */; };
 		A8BDCCE12C1D64A90002AB81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCE02C1D64A90002AB81 /* ViewController.swift */; };
@@ -32,6 +35,7 @@
 		A84A44E82C1DB1D20028F822 /* NotifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84A44EA2C1DC05E0028F822 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		A84A44ED2C1DCE840028F822 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		A84A44F12C1DDE740028F822 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		A8BDCCD92C1D64A90002AB81 /* Hack15.06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack15.06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +55,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8BDCD052C1D66DA0002AB81 /* PMKFoundation in Frameworks */,
+				A89D94B22C1DF910004D4CAC /* SDWebImageMapKit in Frameworks */,
 				A8BDCCF92C1D65100002AB81 /* IQKeyboardManagerSwift in Frameworks */,
+				A89D94B02C1DF910004D4CAC /* SDWebImage in Frameworks */,
 				A8BDCD0F2C1D698E0002AB81 /* KeychainAccess in Frameworks */,
 				A8BDCD022C1D66110002AB81 /* PromiseKit in Frameworks */,
 				A84A44F02C1DD6910028F822 /* Wormholy in Frameworks */,
@@ -132,6 +138,7 @@
 				A8BDCCE02C1D64A90002AB81 /* ViewController.swift */,
 				A84A44E82C1DB1D20028F822 /* NotifCollectionViewCell.swift */,
 				A84A44EA2C1DC05E0028F822 /* NotificationController.swift */,
+				A84A44F12C1DDE740028F822 /* TaskController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 				A8BDCD072C1D690F0002AB81 /* Toast */,
 				A8BDCD0E2C1D698E0002AB81 /* KeychainAccess */,
 				A84A44EF2C1DD6910028F822 /* Wormholy */,
+				A89D94AF2C1DF910004D4CAC /* SDWebImage */,
+				A89D94B12C1DF910004D4CAC /* SDWebImageMapKit */,
 			);
 			productName = Hack15.06;
 			productReference = A8BDCCD92C1D64A90002AB81 /* Hack15.06.app */;
@@ -223,6 +232,7 @@
 				A8BDCD032C1D66DA0002AB81 /* XCRemoteSwiftPackageReference "Foundation" */,
 				A8BDCD062C1D690F0002AB81 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				A8BDCD0D2C1D698E0002AB81 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				A89D94AE2C1DF910004D4CAC /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = A8BDCCDA2C1D64A90002AB81 /* Products */;
 			projectDirPath = "";
@@ -259,6 +269,7 @@
 				A84A44EE2C1DCE840028F822 /* MainModel.swift in Sources */,
 				A8BDCCDD2C1D64A90002AB81 /* AppDelegate.swift in Sources */,
 				A8BDCCDF2C1D64A90002AB81 /* SceneDelegate.swift in Sources */,
+				A84A44F22C1DDE740028F822 /* TaskController.swift in Sources */,
 				A8BDCD0C2C1D69580002AB81 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +505,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A89D94AE2C1DF910004D4CAC /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.3;
+			};
+		};
 		A8BDCCF72C1D65100002AB81 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -549,6 +568,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A8BDCCFA2C1D65360002AB81 /* XCRemoteSwiftPackageReference "Wormholy" */;
 			productName = Wormholy;
+		};
+		A89D94AF2C1DF910004D4CAC /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A89D94AE2C1DF910004D4CAC /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		A89D94B12C1DF910004D4CAC /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A89D94AE2C1DF910004D4CAC /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 		A8BDCCF82C1D65100002AB81 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

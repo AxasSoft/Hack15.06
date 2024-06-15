@@ -14,8 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         Wormholy.awake()
+        
+        if UserDefaults.standard.value(forKey: "firstComplete") == nil {
+            UserDefaults.standard.setValue(false, forKey: "firstComplete")
+            UserDefaults.standard.setValue(false, forKey: "secondComplete")
+        }
         return true
     }
 

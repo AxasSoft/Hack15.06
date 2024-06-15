@@ -21,6 +21,6 @@ struct MainModel {
 
 struct VideoData: Codable {
     let heap: Int?
-    let frameURL: String?
+    let frameUrl: String?
     let frameNumber, id, personCount: Int?
 }

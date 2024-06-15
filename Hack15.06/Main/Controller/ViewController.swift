@@ -31,8 +31,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondTaskDate: UILabel!
     @IBOutlet weak var secondTaskDeadline: UILabel!
     
-//    "Работники на строительном участке №1 работают без отдыха более 2 мин."
+    @IBOutlet weak var taskEmptyStack: UIStackView!
+    @IBOutlet weak var returnTaskButton: UIButton!
+    
+    //    "Работники на строительном участке №1 работают без отдыха более 2 мин."
     var notifications: [String] = []
+    var links: [String] = []
     
     //timer
     var repeatSend = false
@@ -42,9 +46,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstTaskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openFirstTask)))
+        secondTaskView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openSecondTask)))
     }
-
-
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         notifHint.isHidden = false
         notifCollection.isHidden = true
@@ -53,6 +59,7 @@ class ViewController: UIViewController {
         dangerWorkersView.layer.cornerRadius = 8
         allTechniqueView.layer.cornerRadius = 8
         workStopTechniqueView.layer.cornerRadius = 8
+        returnTaskButton.layer.cornerRadius = 8
         
         taskDate.text = Int(Date().timeIntervalSince1970).toDay
         
@@ -66,6 +73,36 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getData), userInfo: nil, repeats: true)
         
+        taskEmptyStack.isHidden = true
+        if UserDefaults.standard.bool(forKey: "firstComplete") == true {
+            firstTaskView.isHidden = true
+        } else {
+            firstTaskView.isHidden = false
+        }
+        
+        if UserDefaults.standard.bool(forKey: "secondComplete") == true {
+            secondTaskView.isHidden = true
+        } else {
+            secondTaskView.isHidden = false
+        }
+        
+        if UserDefaults.standard.bool(forKey: "secondComplete") == true && UserDefaults.standard.bool(forKey: "firstComplete") == true  {
+            taskEmptyStack.isHidden = false
+        }
+        
+    }
+    
+    @objc func openFirstTask(_ sender: UIView){
+        let sBoard = UIStoryboard(name: "Main", bundle: .main)
+        let vc = sBoard.instantiateViewController(withIdentifier: "TaskVC") as! TaskController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func openSecondTask(_ sender: UIView){
+        let sBoard = UIStoryboard(name: "Main", bundle: .main)
+        let vc = sBoard.instantiateViewController(withIdentifier: "TaskVC") as! TaskController
+        vc.isSecondTask = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func getData() {
@@ -76,17 +113,27 @@ class ViewController: UIViewController {
             } .done { [weak self] data in
                 if data.count > 0 {
                     if data[0].heap ?? 0 >= 3 {
+                        self?.notifications = []
+                        self?.links = []
                         self?.notifications.append("Работники соборались группой \(data[0].heap ?? 0) человек(а)")
+                        self?.links.append(data[0].frameUrl ?? "")
                     } else {
                         self?.notifications = []
+                        self?.links = []
                     }
                 }
-
+                
             } .catch { [weak self] _ in
                 
             }
         }
         notifCollection.reloadData()
+    }
+    
+    @IBAction func returnTask(_ sender: UIButton) {
+        UserDefaults.standard.setValue(false, forKey: "firstComplete")
+        UserDefaults.standard.setValue(false, forKey: "secondComplete")
+        viewWillAppear(true)
     }
 }
 
@@ -106,11 +153,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "notifCell", for: indexPath) as! NotifCollectionViewCell
-        cell.configure(text: notifications[indexPath.item])
+        cell.configure(text: notifications[indexPath.item], link: links[indexPath.item] )
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width - 32, height: 122)
+        return CGSize(width: view.frame.width - 32, height: 358)
     }
     
 }

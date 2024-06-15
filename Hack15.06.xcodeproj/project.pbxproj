@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A84A44E92C1DB1D30028F822 /* NotifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44E82C1DB1D20028F822 /* NotifCollectionViewCell.swift */; };
+		A84A44EB2C1DC05E0028F822 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44EA2C1DC05E0028F822 /* NotificationController.swift */; };
+		A84A44EE2C1DCE840028F822 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A44ED2C1DCE840028F822 /* MainModel.swift */; };
+		A84A44F02C1DD6910028F822 /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = A84A44EF2C1DD6910028F822 /* Wormholy */; };
 		A8BDCCDD2C1D64A90002AB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */; };
 		A8BDCCDF2C1D64A90002AB81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */; };
 		A8BDCCE12C1D64A90002AB81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCE02C1D64A90002AB81 /* ViewController.swift */; };
 		A8BDCCE42C1D64A90002AB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BDCCE22C1D64A90002AB81 /* Main.storyboard */; };
 		A8BDCCE62C1D64AB0002AB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BDCCE52C1D64AB0002AB81 /* Assets.xcassets */; };
 		A8BDCCE92C1D64AB0002AB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BDCCE72C1D64AB0002AB81 /* LaunchScreen.storyboard */; };
+		A8BDCCF92C1D65100002AB81 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCCF82C1D65100002AB81 /* IQKeyboardManagerSwift */; };
+		A8BDCCFC2C1D65360002AB81 /* Wormholy in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCCFB2C1D65360002AB81 /* Wormholy */; };
+		A8BDCCFF2C1D656D0002AB81 /* NetCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCCFE2C1D656D0002AB81 /* NetCore.swift */; };
+		A8BDCD022C1D66110002AB81 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCD012C1D66110002AB81 /* PromiseKit */; };
+		A8BDCD052C1D66DA0002AB81 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCD042C1D66DA0002AB81 /* PMKFoundation */; };
+		A8BDCD082C1D690F0002AB81 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCD072C1D690F0002AB81 /* Toast */; };
+		A8BDCD0A2C1D69320002AB81 /* SharedStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCD092C1D69320002AB81 /* SharedStruct.swift */; };
+		A8BDCD0C2C1D69580002AB81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDCD0B2C1D69580002AB81 /* Constants.swift */; };
+		A8BDCD0F2C1D698E0002AB81 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A8BDCD0E2C1D698E0002AB81 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A84A44E82C1DB1D20028F822 /* NotifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifCollectionViewCell.swift; sourceTree = "<group>"; };
+		A84A44EA2C1DC05E0028F822 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A84A44ED2C1DCE840028F822 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		A8BDCCD92C1D64A90002AB81 /* Hack15.06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack15.06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +40,9 @@
 		A8BDCCE52C1D64AB0002AB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8BDCCE82C1D64AB0002AB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8BDCCEA2C1D64AB0002AB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8BDCCFE2C1D656D0002AB81 /* NetCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCore.swift; sourceTree = "<group>"; };
+		A8BDCD092C1D69320002AB81 /* SharedStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStruct.swift; sourceTree = "<group>"; };
+		A8BDCD0B2C1D69580002AB81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +50,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BDCD052C1D66DA0002AB81 /* PMKFoundation in Frameworks */,
+				A8BDCCF92C1D65100002AB81 /* IQKeyboardManagerSwift in Frameworks */,
+				A8BDCD0F2C1D698E0002AB81 /* KeychainAccess in Frameworks */,
+				A8BDCD022C1D66110002AB81 /* PromiseKit in Frameworks */,
+				A84A44F02C1DD6910028F822 /* Wormholy in Frameworks */,
+				A8BDCD082C1D690F0002AB81 /* Toast in Frameworks */,
+				A8BDCCFC2C1D65360002AB81 /* Wormholy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A84A44EC2C1DCE7D0028F822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A84A44ED2C1DCE840028F822 /* MainModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A8BDCCD02C1D64A90002AB81 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +90,77 @@
 		A8BDCCDB2C1D64A90002AB81 /* Hack15.06 */ = {
 			isa = PBXGroup;
 			children = (
-				A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */,
-				A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */,
-				A8BDCCE02C1D64A90002AB81 /* ViewController.swift */,
-				A8BDCCE22C1D64A90002AB81 /* Main.storyboard */,
+				A8BDCCF12C1D64C70002AB81 /* Application */,
+				A8BDCCF22C1D64CE0002AB81 /* Main */,
+				A8BDCCF02C1D64C20002AB81 /* SupportingFiles */,
+			);
+			path = Hack15.06;
+			sourceTree = "<group>";
+		};
+		A8BDCCF02C1D64C20002AB81 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				A8BDCCE52C1D64AB0002AB81 /* Assets.xcassets */,
 				A8BDCCE72C1D64AB0002AB81 /* LaunchScreen.storyboard */,
 				A8BDCCEA2C1D64AB0002AB81 /* Info.plist */,
 			);
-			path = Hack15.06;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A8BDCCF12C1D64C70002AB81 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A8BDCCF52C1D64E00002AB81 /* Shared */,
+				A8BDCCF42C1D64DD0002AB81 /* App */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A8BDCCF22C1D64CE0002AB81 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A84A44EC2C1DCE7D0028F822 /* Model */,
+				A8BDCCF62C1D64EB0002AB81 /* View */,
+				A8BDCCF32C1D64D30002AB81 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A8BDCCF32C1D64D30002AB81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8BDCCE02C1D64A90002AB81 /* ViewController.swift */,
+				A84A44E82C1DB1D20028F822 /* NotifCollectionViewCell.swift */,
+				A84A44EA2C1DC05E0028F822 /* NotificationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8BDCCF42C1D64DD0002AB81 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A8BDCCDC2C1D64A90002AB81 /* AppDelegate.swift */,
+				A8BDCCDE2C1D64A90002AB81 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A8BDCCF52C1D64E00002AB81 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A8BDCCFE2C1D656D0002AB81 /* NetCore.swift */,
+				A8BDCD092C1D69320002AB81 /* SharedStruct.swift */,
+				A8BDCD0B2C1D69580002AB81 /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A8BDCCF62C1D64EB0002AB81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8BDCCE22C1D64A90002AB81 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +179,15 @@
 			dependencies = (
 			);
 			name = Hack15.06;
+			packageProductDependencies = (
+				A8BDCCF82C1D65100002AB81 /* IQKeyboardManagerSwift */,
+				A8BDCCFB2C1D65360002AB81 /* Wormholy */,
+				A8BDCD012C1D66110002AB81 /* PromiseKit */,
+				A8BDCD042C1D66DA0002AB81 /* PMKFoundation */,
+				A8BDCD072C1D690F0002AB81 /* Toast */,
+				A8BDCD0E2C1D698E0002AB81 /* KeychainAccess */,
+				A84A44EF2C1DD6910028F822 /* Wormholy */,
+			);
 			productName = Hack15.06;
 			productReference = A8BDCCD92C1D64A90002AB81 /* Hack15.06.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +216,14 @@
 				Base,
 			);
 			mainGroup = A8BDCCD02C1D64A90002AB81;
+			packageReferences = (
+				A8BDCCF72C1D65100002AB81 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				A8BDCCFA2C1D65360002AB81 /* XCRemoteSwiftPackageReference "Wormholy" */,
+				A8BDCD002C1D66110002AB81 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				A8BDCD032C1D66DA0002AB81 /* XCRemoteSwiftPackageReference "Foundation" */,
+				A8BDCD062C1D690F0002AB81 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				A8BDCD0D2C1D698E0002AB81 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = A8BDCCDA2C1D64A90002AB81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BDCCFF2C1D656D0002AB81 /* NetCore.swift in Sources */,
+				A8BDCD0A2C1D69320002AB81 /* SharedStruct.swift in Sources */,
+				A84A44EB2C1DC05E0028F822 /* NotificationController.swift in Sources */,
 				A8BDCCE12C1D64A90002AB81 /* ViewController.swift in Sources */,
+				A84A44E92C1DB1D30028F822 /* NotifCollectionViewCell.swift in Sources */,
+				A84A44EE2C1DCE840028F822 /* MainModel.swift in Sources */,
 				A8BDCCDD2C1D64A90002AB81 /* AppDelegate.swift in Sources */,
 				A8BDCCDF2C1D64A90002AB81 /* SceneDelegate.swift in Sources */,
+				A8BDCD0C2C1D69580002AB81 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,13 +411,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Hack15.06/Info.plist;
+				INFOPLIST_FILE = Hack15.06/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BuildingAI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +429,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.axas.Hack15-06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,13 +444,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PTSPBS2JZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Hack15.06/Info.plist;
+				INFOPLIST_FILE = Hack15.06/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BuildingAI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +462,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.axas.Hack15-06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,6 +492,95 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8BDCCF72C1D65100002AB81 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		A8BDCCFA2C1D65360002AB81 /* XCRemoteSwiftPackageReference "Wormholy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadelv/Wormholy";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.5;
+			};
+		};
+		A8BDCD002C1D66110002AB81 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.2;
+			};
+		};
+		A8BDCD032C1D66DA0002AB81 /* XCRemoteSwiftPackageReference "Foundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PromiseKit/Foundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		A8BDCD062C1D690F0002AB81 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		A8BDCD0D2C1D698E0002AB81 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A84A44EF2C1DD6910028F822 /* Wormholy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCCFA2C1D65360002AB81 /* XCRemoteSwiftPackageReference "Wormholy" */;
+			productName = Wormholy;
+		};
+		A8BDCCF82C1D65100002AB81 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCCF72C1D65100002AB81 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		A8BDCCFB2C1D65360002AB81 /* Wormholy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCCFA2C1D65360002AB81 /* XCRemoteSwiftPackageReference "Wormholy" */;
+			productName = Wormholy;
+		};
+		A8BDCD012C1D66110002AB81 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCD002C1D66110002AB81 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		A8BDCD042C1D66DA0002AB81 /* PMKFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCD032C1D66DA0002AB81 /* XCRemoteSwiftPackageReference "Foundation" */;
+			productName = PMKFoundation;
+		};
+		A8BDCD072C1D690F0002AB81 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCD062C1D690F0002AB81 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		A8BDCD0E2C1D698E0002AB81 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8BDCD0D2C1D698E0002AB81 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8BDCCD12C1D64A90002AB81 /* Project object */;
 }

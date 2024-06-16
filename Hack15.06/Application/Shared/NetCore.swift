@@ -113,9 +113,9 @@ enum HTTPMethodConfiguration: URLRequestConvertible {
             urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         }
         
-//        if UserDefaults.standard.value(forKey: "firebaseToken") as! String != "" {
-//            urlRequest.addValue("\(UserDefaults.standard.value(forKey: "firebaseToken") ?? "")", forHTTPHeaderField: "x-firebase-token")
-//        }
+        if UserDefaults.standard.value(forKey: "firebaseToken") as! String != "" {
+            urlRequest.addValue("\(UserDefaults.standard.value(forKey: "firebaseToken") ?? "")", forHTTPHeaderField: "x-firebase-token")
+        }
         
         urlRequest.httpMethod = self.method
         urlRequest.httpBody = self.body

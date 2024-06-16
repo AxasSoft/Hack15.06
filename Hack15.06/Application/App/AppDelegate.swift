@@ -6,13 +6,22 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import Firebase
+import UserNotifications
 import Wormholy
+import FirebaseCore
+import AppTrackingTransparency
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+//class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+    
+    var window: UIWindow?
+    
+    let gcmMessageIDKey = "gcm.message_id"
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         Wormholy.awake()
@@ -20,24 +29,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.value(forKey: "firstComplete") == nil {
             UserDefaults.standard.setValue(false, forKey: "firstComplete")
             UserDefaults.standard.setValue(false, forKey: "secondComplete")
+            UserDefaults.standard.setValue("", forKey: "firebaseToken")
         }
+        
+        //notfications
+        if ((UserDefaults.standard.value(forKey: "enableNotificatoin") as? Bool) ?? true) {
+            FirebaseApp.configure()
+        }
+        
+        
+        Messaging.messaging().delegate = self
+        
+        
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, error) in
+            guard error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+        }
+        
+        
+        
+        //Solicit permission from the user to receive notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, error) in
+            guard error == nil else{
+                print(error!.localizedDescription)
+                return
+            }
+        }
+        
+        Messaging.messaging().token { token, error in
+            if let error = error {
+                print("Error fetching FCM registration token: \(error)")
+            } else if let token = token {
+                print("FCM registration token: \(token)")
+                UserDefaults.standard.set(token, forKey: "firebaseToken")
+            }
+        }
+        
+        
+        application.registerForRemoteNotifications()
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+        
+        // Print full message.
+        print(userInfo)
+        
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     }
-
-
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Unable to register for remote notifications: \(error.localizedDescription)")
+    }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        print("Firebase registration token: \(fcmToken)")
+        UserDefaults.standard.set(fcmToken, forKey: "firebaseToken")
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingDelegate) {
+        
+        
+    }
 }
-

@@ -52,6 +52,9 @@ class ViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        getData()
+        
         notifHint.isHidden = false
         notifCollection.isHidden = true
         
